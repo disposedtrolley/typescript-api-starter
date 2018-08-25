@@ -1,1 +1,1 @@
-# typescript-api-stater
+# typescript-api-starter
