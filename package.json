@@ -1,0 +1,28 @@
+{
+  "name": "typescript-api-starter",
+  "version": "1.0.0",
+  "description": "A boilerplate project for APIs using Typescript",
+  "scripts": {
+    "watch-ts": "tsc -w",
+    "watch-node": "nodemon dist/server.js",
+    "watch": "concurrently -k -p \"[{name}]\" -n \"TypeScript, Node\" -c \"yello.bold, cyan.bold\" \"yarn run watch-ts\" \"yarn run watch-node\""
+  },
+  "dependencies": {
+    "@types/express": "^4.11.1",
+    "concurrently": "^3.5.1",
+    "express": "^4.16.3"
+  },
+  "author": "James Liu",
+  "license": "ISC",
+  "devDependencies": {
+    "husky": "^1.0.0-rc.13",
+    "nodemon": "^1.18.3",
+    "prettier": "^1.14.2",
+    "pretty-quick": "^1.6.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  }
+}
